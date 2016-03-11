@@ -59,7 +59,7 @@ GBDT(Gradient Boosting Decision Tree) 又叫 MART（Multiple Additive Regression
 它在被提出之初就和SVM一起被认为是泛化能力（generalization)较强的算法。
 近些年更因为被用于搜索排序的机器学习模型而引起大家关注。
 GBDT是回归树，不是分类树。
-其核心就在于，每一棵树是从之前所有树的残差中来学习的。
+GBDT的核心就在于，每一棵树学的是之前所有树结论和的残差，这个残差就是一个加预测值后能得真实值的累加量。
 为了防止过拟合，和Adaboosting一样，也加入了boosting这一项
 
 4.常见归一化方法？
