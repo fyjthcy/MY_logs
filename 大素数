@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+#define MAX 10000000
+int main()
+{
+  int *a = (int *) malloc ((MAX +1) * sizeof(int));
+  if(a==NULL)
+  {
+    cout<<" memmory error!"<<endl;
+    return -1;
+  }
+  for(int i=0;i<=MAX+1;i++)
+  {
+    a[i]=1;
+  }
+  int t=0;
+  int j;
+  for(int j=2;i<=MAX;j++)
+  {
+    if(a[j])
+    {
+      for(t=2;t*j<=MAX;t++)
+      {
+        a[t*j]=0;
+      }
+    } 
+  }
+  for(int i=2;i*j<=MAX;t++)
+  {
+    if(a[i]) cout<<i<<endl;
+  }
+  return 0;
+}
