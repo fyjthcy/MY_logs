@@ -1,0 +1,19 @@
+1. 方法一：
+for(int i=0;i<N;i++) count[A[i]]++;
+
+2. 方法二：
+定义map进行计算。
+
+bool findMostFrequentInArray(int *a, int size, int &val)
+{
+  if(size == 0)
+   return false;
+  map<int,int> m;
+  for(int i=0;i<size;i++)
+  {
+    m[a[i]]++;
+    if(m[a[i]]>=m[val]) val=a[i];
+  }
+  return true;
+}
+重复最多的数为val, 重复次数为m[val].
