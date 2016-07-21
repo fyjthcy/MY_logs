@@ -1,3 +1,5 @@
 1. Linux 服务器上传文件 rz-be 
    -b binary 用binary的方式上传下载，不解释字符为ascii
    -e 强制escape 所有控制字符，比如Ctrl+x，DEL等。
+2. makefile的学习
+   \ 反斜杠意味着句子的连接换行
