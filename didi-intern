@@ -11,3 +11,6 @@
   #make        //如果遇到问题则按照3进行处理
   #sudo su 
   #make install
+5.  执行./configure: 会Permission denied的错误 
+  解决方法是 查看权限是否问题
+  然后 chmod +x configure 增加执行权限
