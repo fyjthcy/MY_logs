@@ -3,3 +3,6 @@
    -e 强制escape 所有控制字符，比如Ctrl+x，DEL等。
 2. makefile的学习
    \ 反斜杠意味着句子的连接换行
+3.在ubuntu中使用CRF++包在安装过程报错，size_t has not been declared
+据说这是因为在Linux系统下g++没有C++的size_t
+所以需要在需要到size_t的文件中加入头文件 stdlib.h   问题就解决了
