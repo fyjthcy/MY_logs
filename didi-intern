@@ -24,3 +24,5 @@
 9.makefile中生成的.o文件最终都打包成.a静态链接库。
 10.makefile中的各种path要适当改变以适应文档结构，关于多个文件夹之间的编译顺序要自己把我，看makefile中的具体写法是怎样。
 11.从gitlab上面下载项目到本地，首先copy地址，然后xshell中，git clone [地址]，然后用户名是邮箱，然后老密码。
+12.从本地上传项目到gitlab，git diff, git add -u,git commit -m "xxxxxxx",git push origin master,然后出现输入username,password提示，
+   然后就在上传过程中了。
