@@ -1,0 +1,2 @@
+卸载最新版本bazel 0.3.1
+sudo apt-get remove bazel
