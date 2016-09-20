@@ -1,0 +1,17 @@
+error:
+raceback (most recent call last):
+  File "example.py", line 3, in ?
+    import example
+ImportError: ./_example.so: undefined symbol: fact
+
+
+
+This error usually indicates that you forgot to include some object files or libraries in the linking of the shared library file. 
+Make sure you compile both the SWIG wrapper file and your original program into a shared library file. 
+Make sure you pass all of the required libraries to the linker.
+
+Sometimes unresolved symbols occur because a wrapper has been created for a function that doesn't actually exist in a library. 
+This usually occurs when a header file includes a declaration for a function that was never actually implemented or 
+it was removed from a library without updating the header file. 
+To fix this, you can either edit the SWIG input file to remove the offending declaration or 
+you can use the %ignore directive to ignore the declaration.
