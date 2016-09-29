@@ -34,3 +34,9 @@ git push  git@xx.xx.xx.xx:repos/xxx/xxx/xxx.git
    
 sed命令去除文件空格
 echo $VAR | sed 's/ //g' tmp.txt >no_space.txt 输出到no_space.txt
+
+14.g++ 编译问题
+"ISO C++ 1998 does not support 'long long'"
+To fix the compile exception, remove -pedantic from your pstoedit compile command line.
+
+
