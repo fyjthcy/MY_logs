@@ -1,0 +1,2 @@
+1.  vimrc文件放到根目录下[hanchuanyujason@bigdata-gpu-server38 ~]$ vim ~/.vimrc 进行查看 ，rz -be 进行windows上传到linux
+2. 
