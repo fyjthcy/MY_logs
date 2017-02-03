@@ -1,2 +1,2 @@
 1.  vimrc文件放到根目录下[hanchuanyujason@bigdata-gpu-server38 ~]$ vim ~/.vimrc 进行查看 ，rz -be 进行windows上传到linux
-2. 
+2.  scp -r /data1/wangl/workspace/wordseg/msr.1.2.1/bilstm_crf/ hanchuanyujason@10.93.129.20:/data1/hanchuanyujason 从当前服务器考到10.93.129.20的文件
