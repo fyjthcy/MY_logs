@@ -1,2 +1,3 @@
 1.  vimrc文件放到根目录下[hanchuanyujason@bigdata-gpu-server38 ~]$ vim ~/.vimrc 进行查看 ，rz -be 进行windows上传到linux
 2.  scp -r /data1/wangl/workspace/wordseg/msr.1.2.1/bilstm_crf/ hanchuanyujason@10.93.129.20:/data1/hanchuanyujason 从当前服务器考到10.93.129.20的文件
+3. Makefile 如果依赖正确，但依然显示undefined reference to的错误，那么尝试将新的引用部分放到其他引用的最后，一般都是引用次序捣乱！！！
