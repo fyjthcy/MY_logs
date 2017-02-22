@@ -2,3 +2,13 @@
 2.  scp -r /data1/wangl/workspace/wordseg/msr.1.2.1/bilstm_crf/ hanchuanyujason@10.93.129.20:/data1/hanchuanyujason 从当前服务器考到10.93.129.20的文件
 3. Makefile 如果依赖正确，但依然显示undefined reference to的错误，那么尝试将新的引用部分放到其他引用的最后，一般都是引用次序捣乱！！！一般这种情况出现在引用库的库，
 那么库的库要放到最后，库放到库的库前面即可。
+4. g++编译报错原因分析cannot allocate an object of abstract type“XXX ”
+    原因分析：
+通过查看代码发现C++程序在创建一个类的对象时报错了
+错误类型是Cannot allocate an object of abstract type“XXX”
+原因是我的类继承自一个基类，该基类中的函数存在纯虚函数，而我的类中没有重载全部纯虚函数。
+
+解决方法：
+在基类中申明的虚函数，在派生类中必须继承并实现。这样在new一个派生类时才不会报该错误。
+将基类中所有虚函数，在派生类中都继承、实现。例如：基类中virtual int get_feat(char* sentence, std::vector<std::string>& crf_feat) = 0; 
+                                                                                                派生类中int get_feat(const char* sentence, std::vector<std::string>& crf_feat); 参数不一致也是不行的！！！！
