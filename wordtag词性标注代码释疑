@@ -1,0 +1,15 @@
+1.
+result->add_result(cur_word);加载结果函数是
+int WordTagResult::add_result(const char* word) {
+    this->push_back(string(word));
+    return 0;
+}
+直接用this指针返给了result (WordResult *)
+
+result->add_word(cur_word);加载结果函数是
+int WordTagResult::add_word(char* word) {
+    _result.push_back(string(word));
+    log_debug("result size: %d", _result.size());
+    return 0;
+}
+_result 是成员变量 还需要相应的读取函数才可以！
